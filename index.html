@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+<script>
+
+function convert() {
+	let intege = document.getElementById("integ").value;
+    
+    let bin = parseInt(intege, 10);
+    window.alert(bin.toString(2));
+    }
+
+</script>
+</head>
 <body>
 
-<h2>JavaScript in Body</h2>
-
-<p id="demo"></p>
-
-<script>
-document.getElementById("demo").innerHTML = "My First JavaScript";
-</script>
   
+  <input id="integ">
+    <button type="button" onclick="convert()">Submit</button>
 
-  
-  <label for="denary">First name:</label>
-  <input type="text" id="denary" name="denary"><br><br>
-  <input type="submit" value="Submit">
-
-<button type="button"
-onclick="document.getElementById('denary').innerHTML = Date()">
-Click me to display Date and Time.</button>
 
 </body>
 </html> 
