@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
 
+<style>
+	body {
+		background-image: url('https://media.tenor.com/x8v1oNUOmg4AAAAd/rickroll-roll.gif');
+		background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-size: cover;
+	}
+	</style>
+
 <head>
 <script>
 
@@ -8,7 +17,7 @@ function convert() {
 	let intege = document.getElementById("integ").value;
     
     let bin = parseInt(intege, 10);
-    window.alert(bin.toString(2));
+    document.getElementById("Binary").innerHTML=bin.toString(2)
     }
 
 </script>
@@ -19,6 +28,8 @@ function convert() {
   <input id="integ">
     <button type="button" onclick="convert()">Submit</button>
 
+
+<p id="Binary">Test</p>
 
 </body>
 </html> 
