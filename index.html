@@ -1,51 +1,90 @@
 <!DOCTYPE html>
 <html>
-
-<style>
-	body {
-		background-image: url('https://media.tenor.com/x8v1oNUOmg4AAAAd/rickroll-roll.gif');
-		background-repeat: no-repeat;
-  	background-attachment: fixed;
-  	background-size: cover;
-	}
-	</style>
-
 <head>
 
 <script>
-	
-input.addEventListener("keypress", function(event) {
-  // If the user presses the "Enter" key on the keyboard
-  if (event.key === "Enter") {
-    // Cancel the default action, if needed
-    event.preventDefault();
-    // Trigger the button element with a click
-    document.getElementById("integ").click();
-  }
-});	
-
-	</script>
-	
-	
-<script>
 
 function convert() {
+	myFunction();
 	let intege = document.getElementById("integ").value;
     
     let bin = parseInt(intege, 10);
     document.getElementById("Binary").innerHTML=bin.toString(2)
     }
 
+
+function convertToDenary() {
+	myFunction();
+	let binar = document.getElementById("bina").value;
+    
+    let binary = parseInt(binar, 2);
+    document.getElementById("Denary").innerHTML=binary.toString(10)
+    }
+
 </script>
+
+
+
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+
+
+</script>
+
+
+
+
 </head>
 <body>
 
+
   
   <input id="integ">
-    <button type="button" onclick="convert()">Submit</button>
-
+    <button type="button" onclick="convert()" id="denaryInput">Submit</button>
 
 <p id="Binary"></p>
+
+  <input id="bina">
+    <button type="button" onclick="convertToDenary()" id="binaryInput">Submit</button>
+
+<p id="Denary"></p>
+
+
+
+<div id="myDIV" style="display:none;">
+<img src="https://media.tenor.com/x8v1oNUOmg4AAAAd/rickroll-roll.gif">
+</div>
+
+<script>
+var input = document.getElementById("integ");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("denaryInput").click();
+  }
+});
+
+var input = document.getElementById("bina");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("binaryInput").click();
+  }
+});
+
+
+
+</script>
 
 </body>
 </html> 
